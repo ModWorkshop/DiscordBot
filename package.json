@@ -11,6 +11,7 @@
   },
   "license": "GPL-2.0",
   "dependencies": {
+	"animequote": "1.1.x",
     "cleverbot-node": "^0.2.8",
     "d20": "^1.4.1",
     "discord.js": "11.1.x",

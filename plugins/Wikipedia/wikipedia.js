@@ -19,7 +19,7 @@ exports.wiki = {
 				page.summary().then(function(summary) {
 					var sumText = summary.toString().split('\n');
 					var continuation = function() {
-						var paragraph = sumText.shift();
+						var paragraph = sumText.shift() + "\nRead more: " + page.fullurl;
 						if(paragraph){
 							msg.channel.send(paragraph,continuation);
 						}

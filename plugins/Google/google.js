@@ -42,8 +42,9 @@ exports.image = {
 				msg.channel.send( "No result for '" + args + "'");
 				return;
 			}
-			var randResult = data.items[0];
-			msg.channel.send( randResult.title + '\n' + randResult.link);
+			for (var i=0; i<data.items.length; i++){
++				msg.channel.send( data.items[i].title + '\n' + data.items[i].link);
++			}
 		});
 	}
 }

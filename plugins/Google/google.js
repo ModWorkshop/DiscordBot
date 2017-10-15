@@ -43,8 +43,8 @@ exports.image = {
 				return;
 			}
 			for (var i=0; i<data.items.length; i++){
-+				msg.channel.send( data.items[i].title + '\n' + data.items[i].link);
-+			}
+				msg.channel.send( data.items[i].title + '\n' + data.items[i].link);
+			}
 		});
 	}
 }

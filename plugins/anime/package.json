@@ -1,0 +1,7 @@
+{
+  "main": "anime.js",
+  "dependencies": {
+    "animequote": "1.1.x",
+    "request": "2.x.x"
+  }
+}

@@ -1,12 +1,34 @@
 {
 	"global":{
 		"eval": false,
-		"pullanddeploy": false
+		"pullanddeploy": false,
+		"setUsername": false,
+		"create": false,
+		"voice": false,
+		"delete": false,
+		"servers": false,
+		"topic": false,
+		"myid": false,
+		"perm": false,
+		"kick": false,
+		"votekick": false,
+		"log": false
 	},
 	"users":{
 		"userid":{
-			"eval": false,
-			"pullanddeploy": true
+			"eval": true,
+			"pullanddeploy": true,
+			"setUsername": true,
+			"create": true,
+			"voice": true,
+			"delete": true,
+			"servers": true,
+			"topic": true,
+			"myid": true,
+			"perm": true,
+			"kick": true,
+			"votekick": true,
+			"log": true
 		}
 	}
 }

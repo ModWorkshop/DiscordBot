@@ -17,7 +17,7 @@ exports.math_fact = {
                 function(err, res, body) {
                     var data = JSON.parse(body);
                     if (data && data.text) {
-                        msg.channel.sendMessage(data.text)
+                        msg.channel.send(data.text)
                     }
                 });
         }
@@ -30,7 +30,7 @@ exports.math_fact = {
                 function(err, res, body) {
                     var data = JSON.parse(body);
                     if (data && data.text) {
-                        msg.channel.sendMessage(data.text)
+                        msg.channel.send(data.text)
                     }
                 });
         }
@@ -43,7 +43,7 @@ exports.math_fact = {
                 function(err, res, body) {
                     var data = JSON.parse(body);
                     if (data && data.attachments[0].text) {
-                        msg.channel.sendMessage(data.attachments[0].text)
+                        msg.channel.send(data.attachments[0].text)
                     }
                 });
         }
@@ -56,7 +56,7 @@ exports.math_fact = {
                 function(err, res, body) {
                     var data = JSON.parse(body);
                     if (data && data.results[0].name.first) {
-                        msg.channel.sendMessage(data.results[0].name.first + ' ' + data.results[0].name.last + ' aka ' + data.results[0].login.username)
+                        msg.channel.send(data.results[0].name.first + ' ' + data.results[0].name.last + ' aka ' + data.results[0].login.username)
                     }
                 });
         }
@@ -69,7 +69,7 @@ exports.math_fact = {
                 function(err, res, body) {
                     var data = JSON.parse(body);
                     if (data && data.fact) {
-                        msg.channel.sendMessage(data.fact)
+                        msg.channel.send(data.fact)
                     }
                 });
         }
@@ -82,7 +82,7 @@ exports.math_fact = {
                 function(err, res, body) {
                     var data = JSON.parse(body);
                     if (data && data.answer) {
-                        msg.channel.sendMessage(data.answer + '\n' + data.image)
+                        msg.channel.send(data.answer + '\n' + data.image)
                     }
                 });
         }
@@ -94,7 +94,7 @@ exports.math_fact = {
             require("request")("http://mrob.com/time/automome/butan.php",
                 function(err, res, body) {
                     if (body) {
-                        msg.channel.sendMessage(body, {
+                        msg.channel.send(body, {
 							tts: false
 						})
                     }
@@ -109,7 +109,7 @@ exports.math_fact = {
                 function(err, res, body) {
                     var data = JSON.parse(body);
                     if (data && data.text) {
-                        msg.channel.sendMessage(data.text)
+                        msg.channel.send(data.text)
                     }
                 });
         }

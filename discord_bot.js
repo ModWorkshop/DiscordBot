@@ -26,7 +26,7 @@ try {
 }
 
 // Load custom permissions
-var dangerousCommands = ["eval","pullanddeploy","setUsername"];
+var dangerousCommands = ["eval","pullanddeploy","setUsername", "create", "voice", "delete", "servers", "topic", "myid", "perm", "kick","votekick", "log"];
 var Permissions = {};
 try{
 	Permissions = require("./permissions.json");

@@ -171,7 +171,7 @@ var commands = {
 				var target = msg.channel.guild.members.find("id",user);
 				messagebox[target.id] = {
 					channel: msg.channel.id,
-					content: target + ", " + msg.author + " said: " + message
+					content: "<@" + target.id + ">, " + msg.author + " said: " + message
 				};
 				updateMessagebox();
 				msg.channel.send("I have written your message down and will forward it once possible.")

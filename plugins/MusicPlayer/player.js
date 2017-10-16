@@ -60,7 +60,7 @@ exports.play = {
 		// Get the video information.
 		msg.channel.send( wrap('Searching...')).then(response => {
 			// If the suffix doesn't start with 'http', assume it's a search.
-			if (!suffix.toLowerCase().startsWith('http')) {
+			if (!suffix.toLowerCase().startsWith('http') && !suffix.toLowerCase().startsWith('https')) {
 				suffix = 'gvsearch1:' + suffix;
 			}
 

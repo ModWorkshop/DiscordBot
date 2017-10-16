@@ -165,20 +165,24 @@ var commands = {
 			var args = suffix.split(' ');
 			var user = args.shift();
 			var message = args.join(' ');
-			if(user.startsWith('<@')){
+			if(user.startsWith('<@') && message){
+				user = user.replace('!', '');
 				user = user.substr(2,user.length-3);
-			}
-			var target = msg.channel.guild.members.find("id",user);
-			if(!target){
-				target = msg.channel.guild.members.find("username",user);
-			}
-			messagebox[target.id] = {
-				channel: msg.channel.id,
-				content: target + ", " + msg.author + " said: " + message
-			};
-			updateMessagebox();
-			msg.channel.send("message saved.")
-		}
+				var target = msg.channel.guild.members.find("id",user);
+				messagebox[target.id] = {
+					channel: msg.channel.id,
+					content: target + ", " + msg.author + " said: " + message
+				};
+				updateMessagebox();
+				msg.channel.send("I have written your message down and will forward it once possible.")
+			} else if (user.startsWith('<@') && !message.trim()) {
+				msg.channel.send("You didn't give me a message.");
+			} else if (!user.startsWith('<@') && message.trim()) {
+				msg.channel.send("I can't find this user.");
+			} else {
+				msg.channel.send("You gave me no message and no destination.");
+			} 
+		}	
 	},
 	"eval": {
 		usage: "<command>",

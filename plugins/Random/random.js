@@ -82,7 +82,10 @@ exports.math_fact = {
                 function(err, res, body) {
                     var data = JSON.parse(body);
                     if (data && data.answer) {
-                        msg.channel.send(data.answer + '\n' + data.image)
+						var answer = data.answer.charAt(0).toUpperCase() + data.answer.slice(1);
+						if(suffix){
+							msg.channel.send(suffix + '\n' + answer + '.\n' + data.image);
+						} else msg.channel.send(answer + '.\n' + data.image);
                     }
                 });
         }

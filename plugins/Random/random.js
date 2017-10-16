@@ -84,7 +84,7 @@ exports.math_fact = {
                     if (data && data.answer) {
 						var answer = data.answer.charAt(0).toUpperCase() + data.answer.slice(1);
 						if(suffix){
-							msg.channel.send('You asked: "' + suffix + '"\nThe answer is:"' + answer + '!"\n' + data.image);
+							msg.channel.send('You asked: "' + suffix + '"\nThe answer is: "' + answer + '!"\n' + data.image);
 						} else msg.channel.send(answer + '.\n' + data.image);
                     }
                 });

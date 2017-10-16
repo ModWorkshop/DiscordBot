@@ -64,7 +64,15 @@ exports['4chan'] = {
 			}
 		})
 		.catch(function(error) {
-			msg.channel.send("4CHAN ERROR: " + error);
+			var out = error.toString();
+			out = out.replace('"', '');
+			out = out.replace("'", '');
+			out = out.replace('-', '');
+			out = out.replace(':', '');
+			out = out.substr(0,out.length-1);
+			out = out.trim();
+			if(out.endsWith('404')) msg.channel.send('4chan: No matches found.');
+			else msg.channel.send('4chan: ' + out);
 		});
 	}
 }

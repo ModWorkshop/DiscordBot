@@ -1,5 +1,5 @@
 exports.commands = [
-	"giphy"
+	"rgiphy"
 ]
 
 var qs = require("querystring");
@@ -49,7 +49,7 @@ function get_gif(tags, func) {
 	}.bind(this));
 }
 
-exports.giphy = {
+exports.rgiphy = {
 	usage: "<image tags>",
 	description: "returns a random gif from giphy matching the tags passed",
 	process: function(bot, msg, suffix) {

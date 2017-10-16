@@ -1,0 +1,6 @@
+{
+  "main": "pirate.js",
+  "dependencies": {
+    "pirate-speak": "1.0.x"
+  }
+}

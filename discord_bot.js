@@ -133,7 +133,7 @@ var commands = {
         }
     },
     "idle": {
-				usage: "[status]",
+		usage: "[status]",
         description: "sets bot status to idle",
         process: function(bot,msg,suffix){ 
 	    bot.user.setStatus("idle");
@@ -141,7 +141,7 @@ var commands = {
 	}
     },
     "online": {
-				usage: "[status]",
+		usage: "[status]",
         description: "sets bot status to online",
         process: function(bot,msg,suffix){ 
 	    bot.user.setStatus("online");
@@ -158,6 +158,11 @@ var commands = {
         description: "bot says message with text to speech",
         process: function(bot,msg,suffix){ msg.channel.send(suffix,{tts:true});}
     },
+	"hi": {
+        description: "bot says hello to you",
+        process: function(bot,msg,suffix){ msg.channel.send("Hello, " + msg.author + "!");}
+    },
+	
 	"msg": {
 		usage: "<user> <message to leave user>",
 		description: "leaves a message for a user the next time they come online",
